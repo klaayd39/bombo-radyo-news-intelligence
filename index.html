@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <title>Bombo Radyo | News Hub</title>
+
+    <link rel="icon" href="profile.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header role="banner">
+      <div class="header-content">
+        <div class="header-branding">
+          <img
+            src="profile.jpg"
+            alt="Bombo Radyo Logo"
+            class="header-logo"
+            loading="lazy"
+          />
+          <div class="titles">
+            <h1>Bombo Radyo</h1>
+            <p>Global & National News Intelligence</p>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <button id="refresh-button" aria-label="Refresh news">
+            <span class="icon">🔄</span>
+            Refresh
+          </button>
+        </div>
+      </div>
+
+      <div id="status-bar" class="status-bar" role="status" aria-live="polite">
+        <span id="status-message">System Ready</span>
+      </div>
+    </header>
+
+    <main role="main">
+      <nav
+        id="category-buttons"
+        class="category-tabs"
+        aria-label="News categories"
+      ></nav>
+
+      <section class="featured-news" aria-label="Featured headline">
+        <article class="featured-card">
+          <div class="featured-content">
+            <span class="featured-badge">Featured</span>
+
+            <h2 class="featured-title">
+              Major National Headline Goes Here With Strong Visual Emphasis
+            </h2>
+
+            <p class="featured-excerpt">
+              A short summary of the featured news article that gives context
+              and encourages users to read more without overwhelming them.
+            </p>
+
+            <div class="featured-meta">
+              <span class="source-tag">Bombo Radyo</span>
+              <span class="reading-time">5 min read</span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="news-grid-wrapper">
+        <ul id="news-container" aria-live="polite" aria-busy="false">
+          </ul>
+      </section>
+    </main>
+
+    <div id="toast-container" aria-live="assertive"></div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
